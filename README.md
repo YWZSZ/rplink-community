@@ -2,7 +2,7 @@
 
 一个基于 DeepSeek Harness 的本地角色扮演聊天工具：电脑端运行 DSH 插件，手机通过局域网 HTTPS/WSS 连接。
 
-这个仓库是通用版：**不包含任何个人角色卡、聊天记录、表情包、API Key、生图服务地址或签名密钥。** 装好后由你自己创建角色。
+这个仓库**不包含角色卡、表情包或生图服务地址。** 装好后由你自己创建角色、放置表情包和设置生图服务地址。
 
 ## 功能
 
@@ -85,8 +85,6 @@ cd android
 android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
-发布正式版时请使用你自己的签名密钥，详见 [Android 构建说明](docs/ANDROID.md)。
-
 ## 可选：生图
 
 通用版**不包含任何生图后端**。在 `plugin/cordis.patch.yml` 中配置：
@@ -116,18 +114,6 @@ http://127.0.0.1:1933
 在 `plugin/assets/stickers/<pack>/` 放置图片和 `stickers.json`，然后在角色卡里填 pack 名称。格式见 [docs/STICKERS.md](docs/STICKERS.md)。
 
 素材不会随仓库提供，需要你自己准备并确认版权。
-
-## 隐私
-
-仓库中不包含：
-
-- 个人角色卡、聊天记录、章节；
-- 表情包图片或截图；
-- API Key、token、配对码；
-- 个人电脑路径、局域网 IP、签名密钥；
-- 任何第三方生图程序的源码或地址。
-
-运行时数据写在 `~/.dsh/rp-bot/`，已被 `.gitignore` 排除。
 
 ## 开发说明
 
