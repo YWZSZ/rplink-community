@@ -1,0 +1,12 @@
+{
+  "name": "@local/dsh-rp-preset",
+  "version": "0.0.1",
+  "private": true,
+  "description": "RPLink roleplay preset",
+  "type": "module",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

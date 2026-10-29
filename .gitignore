@@ -1,0 +1,30 @@
+# Local runtime and user data
+plugin/node_modules/
+plugin/data/
+plugin/assets/stickers/
+**/characters.json
+
+# Android build output and signing material
+android/.gradle/
+android/.idea/
+android/.kotlin/
+android/build/
+android/app/build/
+android/local.properties
+android/keystore.properties
+android/*.jks
+android/*.keystore
+*.apk
+*.aab
+
+# Logs and local databases
+*.log
+*.db
+*.sqlite
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

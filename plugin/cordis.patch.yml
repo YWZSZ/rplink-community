@@ -1,0 +1,16 @@
+- insert:
+    - id: dsh-rp-bot
+      name: 'dsh-rp-bot'
+      config:
+        port: 3450
+        bindAddress: '0.0.0.0'
+        autoStart: true
+        provider: deepseek-official
+        model: deepseek-v4-flash
+        reasoningEffort: off
+        # 可选：自定义生图服务，见 docs/IMAGE_PROVIDER.md。
+        imageProvider:
+          url: ''
+          token: ''
+        # 可选：已有 OpenViking HTTP 服务；留空则禁用记忆。
+        memoryEndpoint: ''

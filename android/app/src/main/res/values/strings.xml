@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RPLink Community</string>
+    <string name="server_list_title">RPLink Community</string>
+    <string name="server_list_subtitle">选择一个角色，继续你们的聊天</string>
+    <string name="add_computer">扫描配对二维码</string>
+    <string name="manual_pair">粘贴配对链接</string>
+    <string name="empty_title">还没有配对电脑</string>
+    <string name="empty_hint">在电脑端 DSH 的「设置 → RPLink」生成配对码，然后扫描二维码或粘贴链接。</string>
+    <string name="empty_offline_title">连接不上电脑</string>
+    <string name="empty_offline_hint">请确认电脑端 RPLink 已开启，手机和电脑在同一个 Wi-Fi。</string>
+    <string name="pair_title">配对电脑</string>
+    <string name="pair_scan">扫描二维码</string>
+    <string name="pair_manual_hint">或粘贴 rplink://pair?… 链接</string>
+    <string name="pair_submit">开始配对</string>
+    <string name="pair_working">正在配对…</string>
+    <string name="pair_failed">配对失败</string>
+    <string name="pair_success">配对成功</string>
+    <string name="delete_server">删除这台电脑？</string>
+    <string name="delete_server_hint">只会删除手机上的记录；电脑端仍可在 RPLink 设置里移除设备。</string>
+    <string name="online">在线</string>
+    <string name="offline">离线</string>
+    <string name="unknown">未知</string>
+    <string name="reload">刷新</string>
+    <string name="disconnect">断开</string>
+    <string name="revoked_title">配对已失效</string>
+    <string name="revoked_hint">电脑端已移除这台设备，或配对已过期。请回到电脑端重新生成二维码并配对。</string>
+    <string name="tls_error_title">证书不匹配</string>
+    <string name="tls_error_hint">无法验证这台电脑的 HTTPS 证书。为安全起见已停止加载。请重新配对。</string>
+    <string name="network_error_title">无法连接</string>
+    <string name="network_error_hint">请确认手机和电脑在同一个 Wi-Fi，且电脑端 RPLink 已开启。</string>
+    <string name="download_channel">RPLink 下载</string>
+    <string name="download_started">开始下载</string>
+    <string name="download_done">下载完成</string>
+    <string name="download_failed">下载失败</string>
+    <string name="notification_permission">允许通知后，下载进度会显示在通知栏。</string>
+</resources>
