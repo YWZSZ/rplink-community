@@ -89,7 +89,7 @@ android/app/build/outputs/apk/debug/app-debug.apk
 
 ## 可选：生图
 
-通用版**不包含任何生图后端**。你在 DSH 的 RPLink 设置或 `plugin/cordis.patch.yml` 里配置：
+通用版**不包含任何生图后端**。在 `plugin/cordis.patch.yml` 中配置：
 
 ```yaml
 imageProvider:
