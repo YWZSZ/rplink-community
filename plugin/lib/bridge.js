@@ -59,6 +59,7 @@ export class BotBridge {
       maxTokens: mode === 'meeting' ? meetingMax : chatMax,
     };
     const setup = async (agentCtx) => {
+      restrictTools(agentCtx, this.config, this.logger);
       agentCtx.systemPrompt.suppressRuntimeContext();
       let mounted = false;
       if (this.config.usePreset === true) {
@@ -282,6 +283,7 @@ export class BotBridge {
         maxTokens: 500,
       },
       setup: (agentCtx) => {
+        restrictTools(agentCtx, this.config, this.logger);
         agentCtx.systemPrompt.suppressRuntimeContext();
         agentCtx.systemPrompt.section({
           name: 'draw:complete',
@@ -357,6 +359,18 @@ function countAssistantMessages(messages) {
 function memoryBlock(conversation) {
   const block = String(conversation?.memoryBlock || '').trim();
   return block ? '[相关记忆]\n' + block : '';
+}
+
+function restrictTools(agentCtx, config, logger) {
+  if (!agentCtx?.tools || typeof agentCtx.tools.restrict !== 'function') return;
+  const allow = Array.isArray(config?.allowTools)
+    ? config.allowTools.map((name) => String(name || '').trim()).filter(Boolean)
+    : [];
+  try {
+    agentCtx.tools.restrict({ allow });
+  } catch (error) {
+    logger?.warn?.('[rp-bot] tool restriction failed: ' + String(error?.message || error));
+  }
 }
 
 function turnContext(conversation, character, activeEffects = []) {

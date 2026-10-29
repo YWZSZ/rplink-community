@@ -115,6 +115,19 @@ http://127.0.0.1:1933
 
 素材不会随仓库提供，需要你自己准备并确认版权。
 
+## 工具裁剪
+
+RP agent 默认调用 `tools.restrict({ allow: [] })`，不继承 DSH 的全局工具。这样每轮请求不会携带几十个工具 schema，能明显减少上下文和费用。
+
+如果确实需要某个工具，在 `plugin/cordis.patch.yml` 里配置：
+
+```yaml
+allowTools:
+  - read_image
+```
+
+只影响 RP agent，不影响 DSH 桌面其他会话。
+
 ## 开发说明
 
 - `plugin/lib/bridge.js`：DSH agent、提示词、章节、隐藏标记；

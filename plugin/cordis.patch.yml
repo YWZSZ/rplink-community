@@ -8,6 +8,8 @@
         provider: deepseek-official
         model: deepseek-v4-flash
         reasoningEffort: off
+        # RP agent 默认不继承任何工具；需要时填工具名。
+        allowTools: []
         # 可选：自定义生图服务，见 docs/IMAGE_PROVIDER.md。
         imageProvider:
           url: ''
